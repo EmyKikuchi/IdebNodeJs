@@ -40,7 +40,12 @@ app.get(`/inep`, (req, res) => {
         const SELETOR_DROP_1 = 'img[src="/analyticsRes/res/s_InepdataPainelMunicipal/master/selectdropdown_ena.png"]';
 
         //const browser = await puppeteer.launch({headless: false});
-        const browser = await puppeteer.launch();
+        const browser = await puppeteer.launch({
+            args: [
+              '--no-sandbox',
+              '--disable-setuid-sandbox',
+            ],
+          });
         const page = await browser.newPage();
         await page.goto(URL);
         await page.waitForNavigation();
