@@ -41,7 +41,7 @@ app.get(`/inep`, (req, res) => {
 
         //const browser = await puppeteer.launch({headless: false});
         const browser = await puppeteer.launch({
-            headless: true,
+            //headless: true,
             args: [
               '--no-sandbox',
               '--disable-setuid-sandbox',
