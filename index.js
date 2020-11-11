@@ -164,8 +164,8 @@ app.get(`/inep`, (req, res) => {
 
         return res.json({ info });
 
-    })().then( result => {
-        console.log(result);        
+    // })().then( result => {
+    //     console.log(result);        
     });
 
 });
